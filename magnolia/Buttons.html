@@ -42,7 +42,7 @@
 
 
         
-    <div class="book" data-github="raspofabs/magnoliabook" data-level="4" data-basepath="." data-revision="1398435339806">
+    <div class="book" data-github="raspofabs/magnoliabook" data-level="4" data-basepath="." data-revision="1398622002409">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -167,6 +167,36 @@
                 
             </li>
         
+            <li  data-level="7" data-path="Analogue Input.html">
+                
+                <a href="./Analogue Input.html">
+                    <i class="fa fa-check"></i> <b>7.</b> Analogue Input
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="8" >
+                
+                <span><b>8.</b> Shift Registers</span>
+                
+                
+            </li>
+        
+            <li  data-level="9" >
+                
+                <span><b>9.</b> Servos</span>
+                
+                
+            </li>
+        
+            <li  data-level="10" >
+                
+                <span><b>10.</b> Filesystem</span>
+                
+                
+            </li>
+        
     </ul>
 </div>
 
@@ -175,30 +205,32 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 66.66666666666667%;min-width: 50%;"></div>
+        <div class="inner" style="width: 57.142857142857146%;min-width: 42.857142857142854%;"></div>
     </div>
     <div class="chapters">
     
         <a href="./index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
     
-        <a href="./Software requirements.html" title="Basic requirements" class="chapter done new-chapter" data-progress="1" style="left: 16.666666666666668%;"></a>
+        <a href="./Software requirements.html" title="Basic requirements" class="chapter done new-chapter" data-progress="1" style="left: 14.285714285714286%;"></a>
     
-        <a href="./First steps.html" title="First steps" class="chapter done new-chapter" data-progress="2" style="left: 33.333333333333336%;"></a>
+        <a href="./First steps.html" title="First steps" class="chapter done new-chapter" data-progress="2" style="left: 28.571428571428573%;"></a>
     
-        <a href="./Multiple lights.html" title="Multiple lights" class="chapter done new-chapter" data-progress="3" style="left: 50%;"></a>
+        <a href="./Multiple lights.html" title="Multiple lights" class="chapter done new-chapter" data-progress="3" style="left: 42.857142857142854%;"></a>
     
-        <a href="./Buttons.html" title="Buttons" class="chapter done new-chapter" data-progress="4" style="left: 66.66666666666667%;"></a>
+        <a href="./Buttons.html" title="Buttons" class="chapter done new-chapter" data-progress="4" style="left: 57.142857142857146%;"></a>
     
-        <a href="./Serial output.html" title="Serial output" class="chapter  new-chapter" data-progress="5" style="left: 83.33333333333333%;"></a>
+        <a href="./Serial output.html" title="Serial output" class="chapter  new-chapter" data-progress="5" style="left: 71.42857142857143%;"></a>
     
-        <a href="./Serial input.html" title="Serial input" class="chapter  new-chapter" data-progress="6" style="left: 100%;"></a>
+        <a href="./Serial input.html" title="Serial input" class="chapter  new-chapter" data-progress="6" style="left: 85.71428571428571%;"></a>
+    
+        <a href="./Analogue Input.html" title="Analogue Input" class="chapter  new-chapter" data-progress="7" style="left: 100%;"></a>
     
     </div>
 </div>
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_4">
+                    <section class="normal" id="section-gitbook_1">
                     
                         <h1 id="buttons">Buttons</h1>
 <p>To make interactive things, you need inputs. The most basic of which is a simple push button. This lesson shows you how to add a button, read its value, and react to it. In addition, we&#39;re going to learn an important lesson about circuits.</p>
@@ -247,6 +279,8 @@ else
 <h2 id="what-we-need-to-learn-from-this">What we need to learn from this</h2>
 <p>Using switches can cause gaps in your circuits, so you need to make sure you have a circuit all the time, no dangling wires that go no-where. There are two ways to fix dangling wires on switches, the first is to use a <code>pulldown resistor</code>, like we did above. Doing this means that at no point is the input pin left unconnectd.</p>
 <p>The second method is to use the other input mode of the chip, namely <code>INPUT_PULLUP</code>. In this mode things are a bit backward, you will want to connect the switch between the <code>INPUT_PULLUP</code> pin, and the <strong>GND</strong>. When the button is pressed, the button will drain causing a change in state for <code>digitalRead( ... )</code> on the input pin.</p>
+<h2 id="finally">Finally</h2>
+<p>Like with the limited resources stopping us from having more LEDs, you&#39;ll find that the Magnolia having only 6 IO ports makes having more than 6 buttons a very difficult thing. We can solve this problem too, but that will come in a later lesson about shift-in registers. These convert parallel data into serial data, meaning you can read from 8 inputs at once, using only three pins, just like you did with the shift register for extending the number of outputs.</p>
 
                     
                     </section>

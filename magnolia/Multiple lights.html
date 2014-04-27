@@ -42,7 +42,7 @@
 
 
         
-    <div class="book" data-github="raspofabs/magnoliabook" data-level="3" data-basepath="." data-revision="1398435339806">
+    <div class="book" data-github="raspofabs/magnoliabook" data-level="3" data-basepath="." data-revision="1398622002409">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -167,6 +167,36 @@
                 
             </li>
         
+            <li  data-level="7" data-path="Analogue Input.html">
+                
+                <a href="./Analogue Input.html">
+                    <i class="fa fa-check"></i> <b>7.</b> Analogue Input
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="8" >
+                
+                <span><b>8.</b> Shift Registers</span>
+                
+                
+            </li>
+        
+            <li  data-level="9" >
+                
+                <span><b>9.</b> Servos</span>
+                
+                
+            </li>
+        
+            <li  data-level="10" >
+                
+                <span><b>10.</b> Filesystem</span>
+                
+                
+            </li>
+        
     </ul>
 </div>
 
@@ -175,33 +205,36 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 50%;min-width: 33.333333333333336%;"></div>
+        <div class="inner" style="width: 42.857142857142854%;min-width: 28.571428571428573%;"></div>
     </div>
     <div class="chapters">
     
         <a href="./index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
     
-        <a href="./Software requirements.html" title="Basic requirements" class="chapter done new-chapter" data-progress="1" style="left: 16.666666666666668%;"></a>
+        <a href="./Software requirements.html" title="Basic requirements" class="chapter done new-chapter" data-progress="1" style="left: 14.285714285714286%;"></a>
     
-        <a href="./First steps.html" title="First steps" class="chapter done new-chapter" data-progress="2" style="left: 33.333333333333336%;"></a>
+        <a href="./First steps.html" title="First steps" class="chapter done new-chapter" data-progress="2" style="left: 28.571428571428573%;"></a>
     
-        <a href="./Multiple lights.html" title="Multiple lights" class="chapter done new-chapter" data-progress="3" style="left: 50%;"></a>
+        <a href="./Multiple lights.html" title="Multiple lights" class="chapter done new-chapter" data-progress="3" style="left: 42.857142857142854%;"></a>
     
-        <a href="./Buttons.html" title="Buttons" class="chapter  new-chapter" data-progress="4" style="left: 66.66666666666667%;"></a>
+        <a href="./Buttons.html" title="Buttons" class="chapter  new-chapter" data-progress="4" style="left: 57.142857142857146%;"></a>
     
-        <a href="./Serial output.html" title="Serial output" class="chapter  new-chapter" data-progress="5" style="left: 83.33333333333333%;"></a>
+        <a href="./Serial output.html" title="Serial output" class="chapter  new-chapter" data-progress="5" style="left: 71.42857142857143%;"></a>
     
-        <a href="./Serial input.html" title="Serial input" class="chapter  new-chapter" data-progress="6" style="left: 100%;"></a>
+        <a href="./Serial input.html" title="Serial input" class="chapter  new-chapter" data-progress="6" style="left: 85.71428571428571%;"></a>
+    
+        <a href="./Analogue Input.html" title="Analogue Input" class="chapter  new-chapter" data-progress="7" style="left: 100%;"></a>
     
     </div>
 </div>
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_2">
+                    <section class="normal" id="section-gitbook_3">
                     
                         <h1 id="multiple-lights">Multiple lights</h1>
 <p>Adding more is the next step. We&#39;re going to go over what you need to do to modify and extend an Arduino sketch.</p>
+<h2 id="the-code">The code</h2>
 <p>reopen and modify the blink sketch like you did in lesson 1 if you have shut down the IDE, then where it now says</p>
 <pre><code>int led = A0;
 </code></pre><p>you need to add more lines:</p>
@@ -230,8 +263,10 @@ digitalWrite(led3, LOW); // then turn it off
 </code></pre><p>Notice we don&#39;t add a delay between setting <code>led</code> to <code>LOW</code> and setting <code>led2</code> to <code>HIGH</code>. This is because we want the second LED to light up as soon as the first one has gone out, making it look like the light is moving from one LED to another.</p>
 <h2 id="wiring">Wiring</h2>
 <p>Add another two LEDs with their anodes (positive legs) in <strong>A1</strong> and <strong>A2</strong>. Upload the sketch and you should see the three LEDs light up in sequence.</p>
-<h2 id="the-important-bits">The important bits</h2>
+<h2 id="the-take-away">The take-away</h2>
 <p>Whenever you add a new output to your sketch, you need to make sure you set the <code>pinMode</code> for the pin you are going to be using. Usually, you want to setup some <code>int</code> values for the pins so it is a little easier to know what each pin is for. You have to use <code>digitalWrite</code> to set whether the pin is outputting a <strong>GND</strong> (<code>LOW</code>) or <strong>VCC</strong> (<code>HIGH</code>) value.</p>
+<h2 id="finally">Finally</h2>
+<p>We&#39;re limited to only having 6 LEDs when powering them directly from the pins. There are a number of different ways around this limit, but the one we will be exploring later involves adding another chip to the setup, a shift register, and that will let us power 8 (or even more) LEDs from only three pins.</p>
 
                     
                     </section>
