@@ -1,0 +1,328 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Shift Registers | Learning arduino with the Magnolia</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="raspofabs">
+        <meta name="description" content="This gitbook is a guide for beginners who have their hands on a Magnolia board from the L.A. Robotics club, originally developed as a Kickstarter campaign to produce an Arduino inspired robotics starter kit for a very meagre sum of $5 per board.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        
+        <link rel="prev" href="./Filesystem.html" />
+        
+
+        <meta property="og:title" content="Shift Registers | Learning arduino with the Magnolia">
+        <meta property="og:site_name" content="Learning arduino with the Magnolia">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/raspofabs">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    </head>
+    <body>
+        
+
+        <link rel="stylesheet" href="gitbook/style.css">
+        
+
+
+        
+    <div class="book" data-github="raspofabs/magnoliabook" data-level="9" data-basepath="." data-revision="1398725630769">
+    <div class="book-header">
+    <!-- Actions Left -->
+    
+    <a href="https://github.com/raspofabs/magnoliabook" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+    <span id="font-settings-wrapper">
+        <a href="#" class="btn pull-left toggle-font-settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+	<div class="dropdown-caret">
+  <span class="caret-outer"></span>
+  <span class="caret-inner"></span>
+</div>
+
+	<div class="btn-group btn-block">
+		<button id="reduce-font-size" class="btn btn-default">A</button>
+		<button id="enlarge-font-size" class="btn btn-default">A</button>
+	</div>
+
+	<ul class="list-group font-family-list">
+		<li class="list-group-item" data-font="0">Serif</li>
+		<li class="list-group-item" data-font="1">Sans</li>
+	</ul>
+
+	<div class="btn-group btn-group-xs btn-block color-theme-list">
+	  <button type="button" class="btn btn-default" id="color-theme-preview-0" data-theme="0">White</button>
+	  <button type="button" class="btn btn-default" id="color-theme-preview-1" data-theme="1">Sepia</button>
+	  <button type="button" class="btn btn-default" id="color-theme-preview-2" data-theme="2">Night</button>
+	</div>
+</div>
+
+    </span>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    
+    <a href="https://github.com/raspofabs/magnoliabook/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/raspofabs/magnoliabook/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+    
+
+    <!-- Title -->
+    <h1><a href="./" >Learning arduino with the Magnolia</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        <li>
+            <a href="https://github.com/raspofabs" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/raspofabs/magnoliabook/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/raspofabs/magnoliabook/edit/master/Shift Registers.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        
+        <li data-level="0" data-path="index.html">
+            <a href="./"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="Software requirements.html">
+                
+                <a href="./Software requirements.html">
+                    <i class="fa fa-check"></i> <b>1.</b> Basic requirements
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="2" data-path="First steps.html">
+                
+                <a href="./First steps.html">
+                    <i class="fa fa-check"></i> <b>2.</b> First steps
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="3" data-path="Multiple lights.html">
+                
+                <a href="./Multiple lights.html">
+                    <i class="fa fa-check"></i> <b>3.</b> Multiple lights
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="4" data-path="Buttons.html">
+                
+                <a href="./Buttons.html">
+                    <i class="fa fa-check"></i> <b>4.</b> Buttons
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="5" data-path="Serial output.html">
+                
+                <a href="./Serial output.html">
+                    <i class="fa fa-check"></i> <b>5.</b> Serial output
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="6" data-path="Serial input.html">
+                
+                <a href="./Serial input.html">
+                    <i class="fa fa-check"></i> <b>6.</b> Serial input
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="7" data-path="Analogue Input.html">
+                
+                <a href="./Analogue Input.html">
+                    <i class="fa fa-check"></i> <b>7.</b> Analogue Input
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="8" data-path="Filesystem.html">
+                
+                <a href="./Filesystem.html">
+                    <i class="fa fa-check"></i> <b>8.</b> Filesystem
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="9" data-path="Shift Registers.html">
+                
+                <a href="./Shift Registers.html">
+                    <i class="fa fa-check"></i> <b>9.</b> Shift Registers
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="10" >
+                
+                <span><b>10.</b> Servos</span>
+                
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="page-wrapper" tabindex="-1">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 100%;min-width: 88.88888888888889%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="./index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="./Software requirements.html" title="Basic requirements" class="chapter done new-chapter" data-progress="1" style="left: 11.11111111111111%;"></a>
+    
+        <a href="./First steps.html" title="First steps" class="chapter done new-chapter" data-progress="2" style="left: 22.22222222222222%;"></a>
+    
+        <a href="./Multiple lights.html" title="Multiple lights" class="chapter done new-chapter" data-progress="3" style="left: 33.333333333333336%;"></a>
+    
+        <a href="./Buttons.html" title="Buttons" class="chapter done new-chapter" data-progress="4" style="left: 44.44444444444444%;"></a>
+    
+        <a href="./Serial output.html" title="Serial output" class="chapter done new-chapter" data-progress="5" style="left: 55.55555555555556%;"></a>
+    
+        <a href="./Serial input.html" title="Serial input" class="chapter done new-chapter" data-progress="6" style="left: 66.66666666666667%;"></a>
+    
+        <a href="./Analogue Input.html" title="Analogue Input" class="chapter done new-chapter" data-progress="7" style="left: 77.77777777777777%;"></a>
+    
+        <a href="./Filesystem.html" title="Filesystem" class="chapter done new-chapter" data-progress="8" style="left: 88.88888888888889%;"></a>
+    
+        <a href="./Shift Registers.html" title="Shift Registers" class="chapter done new-chapter" data-progress="9" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_9">
+                    
+                        <h1 id="shift-registers">Shift Registers</h1>
+<p>To get around the limitations of the Magnolia&#39;s 6 IO pins, this lesson will show how to use shift registers to turn three pins into eight. This can be extended to many more outputs with shift registers that can be chained.</p>
+<p>The shift register we are going to use is called the <strong>HC595</strong>, and the one in your kit is specifically an <strong>SN74HC595</strong> (normal one with legs so you can stick it in the prototyping board.)</p>
+<pre><code>Qb  1   U   16 Vcc
+Qc  2       15 Qa
+Qd  3       14 SER
+Qe  4       13 OE(ground to enable)
+Qf  5       12 RCLK
+Qg  6       11 SRCLK
+Qh  7       10 SRCLR(power to disable)
+GND 8        9 Qh&#39;
+</code></pre><h2 id="the-code">The code</h2>
+<p>The <strong>HC595</strong> has a 16 pins, we will be using the eight output pins that are meant to be the parallel output to power our LEDs. To drive those outputs we will be connecting to the data and clock line for the internal registers, and pushing the internal registers to the output pins with the register clock.</p>
+<p>When using chips with clock lines, we usually find they are triggered by positive-edge. This means the line transitions from a <code>LOW</code> to a <code>HIGH</code>. We&#39;ll start by adding this function to the top of our sketch so the main code can call it.</p>
+<pre><code>void trigger( int pin )
+{
+    digitalWrite(pin,HIGH);
+    digitalWrite(pin,LOW);
+}
+</code></pre><p>Inside the <strong>HC595</strong>, there are internal registers that can either be set high, or low. The internal registers ar called Qa&#39; through Qh&#39;. The external registers are called Qa through Qh. When <strong>RCLK</strong> is triggered, the values of the external registers are overwritten by the internal ones. This means we can safely modify the values on the internal registers without worrying that anything is happening outside.</p>
+<p>To modify the internal registers, we need to use <strong>SER</strong> and <strong>SRCLK</strong>. Every time the <strong>SRCLK</strong> is triggered, two things happen: The values in Qh&#39; down to Qb&#39; get overwritten by Qg&#39; down to Qa&#39;, and then the value of <strong>SER</strong> is read, shunted into Qa&#39;. This is why it is called a shift register. Every time you trigger <strong>SRCLK</strong> all the values are shifted along to the next Q&#39; register.</p>
+<p>To shift out all eight values, we need a function to push one value out.</p>
+<pre><code>void put_one( int val )
+{
+    // set SER
+    digitalWrite(SER, val);
+
+    // trigger a shift
+    trigger(SRCLK);
+}
+</code></pre><p>This sets the <strong>SER</strong> line, then triggers the <strong>SRCLK</strong>, meaning the values get shifted. At this point, the outputs Qa - Qh are still in whatever state they were in before, but Qa&#39; - Qh&#39; have been shifted.</p>
+<p>Often we will use binary to feed into shift registers, so we will do that and write a function to take a byte (8 bits) and set all the shift register values in sequence, then trigger <strong>RCLK</strong> to update the Q registers (the external ones.)</p>
+<pre><code>void send_out( int bits )
+{
+    for( int i = 0; i &lt; 8; ++i )
+    {
+        // send only the lowest bit
+        put_one( val &amp; 1 );
+
+        // move the next highest bit down
+        val &gt;&gt;= 1;
+    }
+    trigger(RCLK); // move Q&#39; into Q
+}
+</code></pre>
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./Filesystem.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+    </div>
+</div>
+
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="gitbook/app.js"></script>
+        
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-mixpanel/plugin.js"></script>
+    
+
+    
+    <script src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {};
+    gitbook.start(config);
+});
+</script>
+
+    </body>
+</html>

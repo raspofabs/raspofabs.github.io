@@ -1,0 +1,331 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Filesystem | Learning arduino with the Magnolia</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="raspofabs">
+        <meta name="description" content="This gitbook is a guide for beginners who have their hands on a Magnolia board from the L.A. Robotics club, originally developed as a Kickstarter campaign to produce an Arduino inspired robotics starter kit for a very meagre sum of $5 per board.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="./Shift Registers.html" />
+        
+        
+        <link rel="prev" href="./Analogue Input.html" />
+        
+
+        <meta property="og:title" content="Filesystem | Learning arduino with the Magnolia">
+        <meta property="og:site_name" content="Learning arduino with the Magnolia">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/raspofabs">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    </head>
+    <body>
+        
+
+        <link rel="stylesheet" href="gitbook/style.css">
+        
+
+
+        
+    <div class="book" data-github="raspofabs/magnoliabook" data-level="8" data-basepath="." data-revision="1398725630769">
+    <div class="book-header">
+    <!-- Actions Left -->
+    
+    <a href="https://github.com/raspofabs/magnoliabook" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+    <span id="font-settings-wrapper">
+        <a href="#" class="btn pull-left toggle-font-settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+	<div class="dropdown-caret">
+  <span class="caret-outer"></span>
+  <span class="caret-inner"></span>
+</div>
+
+	<div class="btn-group btn-block">
+		<button id="reduce-font-size" class="btn btn-default">A</button>
+		<button id="enlarge-font-size" class="btn btn-default">A</button>
+	</div>
+
+	<ul class="list-group font-family-list">
+		<li class="list-group-item" data-font="0">Serif</li>
+		<li class="list-group-item" data-font="1">Sans</li>
+	</ul>
+
+	<div class="btn-group btn-group-xs btn-block color-theme-list">
+	  <button type="button" class="btn btn-default" id="color-theme-preview-0" data-theme="0">White</button>
+	  <button type="button" class="btn btn-default" id="color-theme-preview-1" data-theme="1">Sepia</button>
+	  <button type="button" class="btn btn-default" id="color-theme-preview-2" data-theme="2">Night</button>
+	</div>
+</div>
+
+    </span>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    
+    <a href="https://github.com/raspofabs/magnoliabook/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/raspofabs/magnoliabook/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+    
+
+    <!-- Title -->
+    <h1><a href="./" >Learning arduino with the Magnolia</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        <li>
+            <a href="https://github.com/raspofabs" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/raspofabs/magnoliabook/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/raspofabs/magnoliabook/edit/master/Filesystem.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        
+        <li data-level="0" data-path="index.html">
+            <a href="./"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="Software requirements.html">
+                
+                <a href="./Software requirements.html">
+                    <i class="fa fa-check"></i> <b>1.</b> Basic requirements
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="2" data-path="First steps.html">
+                
+                <a href="./First steps.html">
+                    <i class="fa fa-check"></i> <b>2.</b> First steps
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="3" data-path="Multiple lights.html">
+                
+                <a href="./Multiple lights.html">
+                    <i class="fa fa-check"></i> <b>3.</b> Multiple lights
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="4" data-path="Buttons.html">
+                
+                <a href="./Buttons.html">
+                    <i class="fa fa-check"></i> <b>4.</b> Buttons
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="5" data-path="Serial output.html">
+                
+                <a href="./Serial output.html">
+                    <i class="fa fa-check"></i> <b>5.</b> Serial output
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="6" data-path="Serial input.html">
+                
+                <a href="./Serial input.html">
+                    <i class="fa fa-check"></i> <b>6.</b> Serial input
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="7" data-path="Analogue Input.html">
+                
+                <a href="./Analogue Input.html">
+                    <i class="fa fa-check"></i> <b>7.</b> Analogue Input
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="8" data-path="Filesystem.html">
+                
+                <a href="./Filesystem.html">
+                    <i class="fa fa-check"></i> <b>8.</b> Filesystem
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="9" data-path="Shift Registers.html">
+                
+                <a href="./Shift Registers.html">
+                    <i class="fa fa-check"></i> <b>9.</b> Shift Registers
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="10" >
+                
+                <span><b>10.</b> Servos</span>
+                
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="page-wrapper" tabindex="-1">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 88.88888888888889%;min-width: 77.77777777777777%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="./index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="./Software requirements.html" title="Basic requirements" class="chapter done new-chapter" data-progress="1" style="left: 11.11111111111111%;"></a>
+    
+        <a href="./First steps.html" title="First steps" class="chapter done new-chapter" data-progress="2" style="left: 22.22222222222222%;"></a>
+    
+        <a href="./Multiple lights.html" title="Multiple lights" class="chapter done new-chapter" data-progress="3" style="left: 33.333333333333336%;"></a>
+    
+        <a href="./Buttons.html" title="Buttons" class="chapter done new-chapter" data-progress="4" style="left: 44.44444444444444%;"></a>
+    
+        <a href="./Serial output.html" title="Serial output" class="chapter done new-chapter" data-progress="5" style="left: 55.55555555555556%;"></a>
+    
+        <a href="./Serial input.html" title="Serial input" class="chapter done new-chapter" data-progress="6" style="left: 66.66666666666667%;"></a>
+    
+        <a href="./Analogue Input.html" title="Analogue Input" class="chapter done new-chapter" data-progress="7" style="left: 77.77777777777777%;"></a>
+    
+        <a href="./Filesystem.html" title="Filesystem" class="chapter done new-chapter" data-progress="8" style="left: 88.88888888888889%;"></a>
+    
+        <a href="./Shift Registers.html" title="Shift Registers" class="chapter  new-chapter" data-progress="9" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_2">
+                    
+                        <h1 id="filesystem">Filesystem</h1>
+<p>The ATMega328p doesn&#39;t have a hard drive attached, and even plugging in an SDCARD is a small project of its own, but the little microcontroller does have a very small amount of storage in the form of EEPROM, Electronically Erasable, Programmable Read-only memory. 1024 bytes to be precise.</p>
+<p>We can use this to store something that is meant to survive across power outages. We will use it to store the number of times the Magnolia has been booted up. Useless, but a good starting point for any ideas you might have as it includes reading and writing.</p>
+<h2 id="the-code">The code</h2>
+<p>Reading and writing from EEPROM isn&#39;t a basic feature of Arduino, so you need to include a header that makes this code compilable. Add this at the top.</p>
+<pre><code>#include &lt;EEPROM.h&gt;
+</code></pre><p>We&#39;ve still got to display something, so use the normal LED output code.</p>
+<pre><code>int led = A0;
+
+void setup()
+{
+    pinMode(led,OUTPUT);
+</code></pre><p>but we&#39;re going to do the body of our code in setup this time, so after setting the pinmode, add this.</p>
+<pre><code>    int address = 0;
+    int bootCount = EEPROM.read(address);
+    EEPROM.write(address, bootCount+1);
+
+    LEDFlash(bootCount);
+
+    // wait for ten seconds, then reset the bootcount
+    delay(10000);
+    EEPROM.write(address, 1);
+    LEDFlash(4);
+}
+</code></pre><p>LEDFlash isn&#39;t an Arduino function, it&#39;s one we&#39;re going to write. Above the function setup, add this.</p>
+<pre><code>void LEDFlash( int n )
+{
+    for( int i = 0; i &lt; n; ++i )
+    {
+        digitalWrite(led, HIGH);
+        delay(50);
+        digitalWrite(led, LOW);
+        delay(200);
+    }
+}
+</code></pre><p>Now we have a function we can call. You can use this function in other sketches by copy pasting it in.</p>
+<p>We&#39;re not going to use the loop on this sketch, so make sure it looks like this.</p>
+<pre><code>void loop()
+{
+}
+</code></pre><p>Now, when you upload, the first thing it will do is flash the number of times the magnolia has been powered up. Leave it for ten seconds, then it should flash again saying it&#39;s reset the boot count. Each time you unplug the USB and plug it back in again, then number of times it flashes should go up by one. Try it a few times to make sure. It doesn&#39;t matter how long you leave it unplugged, as EEPROM doesn&#39;t change when there is no power to the device.</p>
+<h2 id="take-away">Take away</h2>
+<p>There is a place to store data that you need between power failures, but it&#39;s very limited, only 1024 bytes. That&#39;s not enough for a desktop icon (they are normally at least 4k).</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./Analogue Input.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./Shift Registers.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="gitbook/app.js"></script>
+        
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-mixpanel/plugin.js"></script>
+    
+
+    
+    <script src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {};
+    gitbook.start(config);
+});
+</script>
+
+    </body>
+</html>
