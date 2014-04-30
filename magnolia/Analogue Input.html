@@ -42,7 +42,7 @@
 
 
         
-    <div class="book" data-github="raspofabs/magnoliabook" data-level="7" data-basepath="." data-revision="1398874569538">
+    <div class="book" data-github="raspofabs/magnoliabook" data-level="7" data-basepath="." data-revision="1398895358968">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -292,7 +292,7 @@ void setup()
 <h2 id="running">Running</h2>
 <p>Now try the example. The LED light should be flashing. If you cover the photoresistor, the amount of time the LED is on for per cycle will increase.</p>
 <h2 id="why-ground-">Why ground?</h2>
-<p>If we ground with different values, the photoresistor will become sensitive to different levels of light. This is because the grounding resistance pairs with the photoresistor resistance to create a voltage divider.</p>
+<p>If we ground with different values of resistor, the photoresistor will become sensitive to different levels of light. High value resistances make it less sensitve, allowing for sunlight levels. Low value resistances make it more sensitive, meaning you can detect low light level differences. This is because the grounding resistance pairs with the photoresistor resistance to create a voltage divider.</p>
 <p>In a circuit, the current is the same the whole circuit around, but the voltage on the other hand, is not. Voltage is a measurement of potential difference, and a really obvious example is how we can add multiple batteries in a line to increase the voltage.</p>
 <p>Two 1.5v batteries in a battery holder turn into a 3v battery because the voltages add up, but it&#39;s not like they have become two 3v batteries by touching, they are still two seperate 1.5v batteries than can still be tapped for power independently as well.</p>
 <p>As two 1.5v batteries add up to 3v, so do two sources of resistance. We calculate what the voltage is at each resistance by dividing the voltage into two different ones based on the resistance of the two sources of resistance. In our circuit, the <strong>GND</strong> is 0v, and the <strong>VCC</strong> is 5v. To calculate the voltage between the two resistors, we can work it out from first principles and ohms law. Or we can just use this formula:</p>
