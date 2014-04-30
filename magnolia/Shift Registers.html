@@ -42,7 +42,7 @@
 
 
         
-    <div class="book" data-github="raspofabs/magnoliabook" data-level="10" data-basepath="." data-revision="1398845128956">
+    <div class="book" data-github="raspofabs/magnoliabook" data-level="10" data-basepath="." data-revision="1398874052298">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -332,6 +332,7 @@ void loop()
 <p>Take a jumper and jump between Qa (pin 15), and the row above Qb. This is so you can have all your LEDs plugged straight into the 8 rows starting above Qb.</p>
 <p>Insert all your LEDs anode by the chip. All the cathodes should link to one of the two remaining rails. This rail will have a 2k resistor just to make sure the overall current drop doesn&#39;t drain the Magnolia. The 2k resistor should then be linked to <strong>GND</strong>.</p>
 <p>Upload!</p>
+<p><img src="ShiftReg_bb.png" alt="button"></p>
 <h2 id="more-outputs">More outputs</h2>
 <p>Pin 9 is high when Qh&#39; is high. This means that if there are two chips, then chip 1 Qh&#39; can be attached to chip 2 <strong>SER</strong>, The <strong>SRCLK</strong> and <strong>RCLK</strong> can be wired common, then you have a 16bit shift-register. This sequence of adding more chips eventually runs out of juice, but not so quickly that it matters for most hobby projects.</p>
 
