@@ -42,7 +42,7 @@
 
 
         
-    <div class="book" data-github="raspofabs/magnoliabook" data-level="4" data-basepath="." data-revision="1398896391664">
+    <div class="book" data-github="raspofabs/magnoliabook" data-level="4" data-basepath="." data-revision="1398896841358">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -302,6 +302,8 @@ else
 <h2 id="what-we-need-to-learn-from-this">What we need to learn from this</h2>
 <p>Using switches can cause gaps in your circuits, so you need to make sure you have a circuit all the time, no dangling wires that go no-where. There are two ways to fix dangling wires on switches, the first is to use a <code>pulldown resistor</code>, like we did above. Doing this means that at no point is the input pin left unconnectd.</p>
 <p>The second method is to use the other input mode of the chip, namely <code>INPUT_PULLUP</code>. In this mode things are a bit backward, you will want to connect the switch between the <code>INPUT_PULLUP</code> pin, and the <strong>GND</strong>. When the button is pressed, the button will drain causing a change in state for <code>digitalRead( ... )</code> on the input pin.</p>
+<h2 id="fully-understanding-why-it-s-doing-what-it-s-doing">Fully understanding why it&#39;s doing what it&#39;s doing</h2>
+<p>Start by thinking of <strong>A0</strong> as being able to read the voltage difference between <strong>GND</strong> and whatever is plugged into it.</p>
 <h2 id="finally">Finally</h2>
 <p>Like with the limited resources stopping us from having more LEDs, you&#39;ll find that the Magnolia having only 6 IO ports makes having more than 6 buttons a very difficult thing. We can solve this problem too, but that will come in a later lesson about shift-in registers. These convert parallel data into serial data, meaning you can read from 8 inputs at once, using only three pins, just like you did with the shift register for extending the number of outputs.</p>
 
