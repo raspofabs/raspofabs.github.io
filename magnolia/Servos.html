@@ -1,0 +1,324 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Servos | Learning arduino with the Magnolia</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="raspofabs">
+        <meta name="description" content="This gitbook is a guide for beginners who have their hands on a Magnolia board from the L.A. Robotics club, originally developed as a Kickstarter campaign to produce an Arduino inspired robotics starter kit for a very meagre sum of $5 per board.">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="./Shift Registers.html" />
+        
+        
+        <link rel="prev" href="./Filesystem.html" />
+        
+
+        <meta property="og:title" content="Servos | Learning arduino with the Magnolia">
+        <meta property="og:site_name" content="Learning arduino with the Magnolia">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/raspofabs">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    </head>
+    <body>
+        
+
+        <link rel="stylesheet" href="gitbook/style.css">
+        
+
+
+        
+    <div class="book" data-github="raspofabs/magnoliabook" data-level="9" data-basepath="." data-revision="1398845128956">
+    <div class="book-header">
+    <!-- Actions Left -->
+    
+    <a href="https://github.com/raspofabs/magnoliabook" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+    <span id="font-settings-wrapper">
+        <a href="#" class="btn pull-left toggle-font-settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+	<div class="dropdown-caret">
+  <span class="caret-outer"></span>
+  <span class="caret-inner"></span>
+</div>
+
+	<div class="btn-group btn-block">
+		<button id="reduce-font-size" class="btn btn-default">A</button>
+		<button id="enlarge-font-size" class="btn btn-default">A</button>
+	</div>
+
+	<ul class="list-group font-family-list">
+		<li class="list-group-item" data-font="0">Serif</li>
+		<li class="list-group-item" data-font="1">Sans</li>
+	</ul>
+
+	<div class="btn-group btn-group-xs btn-block color-theme-list">
+	  <button type="button" class="btn btn-default" id="color-theme-preview-0" data-theme="0">White</button>
+	  <button type="button" class="btn btn-default" id="color-theme-preview-1" data-theme="1">Sepia</button>
+	  <button type="button" class="btn btn-default" id="color-theme-preview-2" data-theme="2">Night</button>
+	</div>
+</div>
+
+    </span>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    
+    <a href="https://github.com/raspofabs/magnoliabook/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/raspofabs/magnoliabook/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+    
+
+    <!-- Title -->
+    <h1><a href="./" >Learning arduino with the Magnolia</a></h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        <li>
+            <a href="https://github.com/raspofabs" target="blank">About the author</a>
+        </li>
+        <li>
+            <a href="https://github.com/raspofabs/magnoliabook/issues" target="blank">Questions and Issues</a>
+        </li>
+        <li>
+            <a href="https://github.com/raspofabs/magnoliabook/edit/master/Servos.md" target="blank">Edit and Contribute</a>
+        </li>
+        <li class="divider"></li>
+        
+        <li data-level="0" data-path="index.html">
+            <a href="./"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="Software requirements.html">
+                
+                <a href="./Software requirements.html">
+                    <i class="fa fa-check"></i> <b>1.</b> Basic requirements
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="2" data-path="First steps.html">
+                
+                <a href="./First steps.html">
+                    <i class="fa fa-check"></i> <b>2.</b> First steps
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="3" data-path="Multiple lights.html">
+                
+                <a href="./Multiple lights.html">
+                    <i class="fa fa-check"></i> <b>3.</b> Multiple lights
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="4" data-path="Buttons.html">
+                
+                <a href="./Buttons.html">
+                    <i class="fa fa-check"></i> <b>4.</b> Buttons
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="5" data-path="Serial output.html">
+                
+                <a href="./Serial output.html">
+                    <i class="fa fa-check"></i> <b>5.</b> Serial output
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="6" data-path="Serial input.html">
+                
+                <a href="./Serial input.html">
+                    <i class="fa fa-check"></i> <b>6.</b> Serial input
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="7" data-path="Analogue Input.html">
+                
+                <a href="./Analogue Input.html">
+                    <i class="fa fa-check"></i> <b>7.</b> Analogue Input
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="8" data-path="Filesystem.html">
+                
+                <a href="./Filesystem.html">
+                    <i class="fa fa-check"></i> <b>8.</b> Filesystem
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="9" data-path="Servos.html">
+                
+                <a href="./Servos.html">
+                    <i class="fa fa-check"></i> <b>9.</b> Servos
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="10" data-path="Shift Registers.html">
+                
+                <a href="./Shift Registers.html">
+                    <i class="fa fa-check"></i> <b>10.</b> Shift Registers
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="11" data-path="Multiple Inputs.html">
+                
+                <a href="./Multiple Inputs.html">
+                    <i class="fa fa-check"></i> <b>11.</b> Multiple Inputs
+                </a>
+                
+                
+            </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="page-wrapper" tabindex="-1">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 100%;min-width: 90.9090909090909%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="./index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="./Software requirements.html" title="Basic requirements" class="chapter done new-chapter" data-progress="1" style="left: 9.090909090909092%;"></a>
+    
+        <a href="./Shift Registers.html" title="Shift Registers" class="chapter done " data-progress="10" style="left: 18.181818181818183%;"></a>
+    
+        <a href="./Multiple Inputs.html" title="Multiple Inputs" class="chapter done " data-progress="11" style="left: 27.272727272727273%;"></a>
+    
+        <a href="./First steps.html" title="First steps" class="chapter done new-chapter" data-progress="2" style="left: 36.36363636363637%;"></a>
+    
+        <a href="./Multiple lights.html" title="Multiple lights" class="chapter done new-chapter" data-progress="3" style="left: 45.45454545454545%;"></a>
+    
+        <a href="./Buttons.html" title="Buttons" class="chapter done new-chapter" data-progress="4" style="left: 54.54545454545455%;"></a>
+    
+        <a href="./Serial output.html" title="Serial output" class="chapter done new-chapter" data-progress="5" style="left: 63.63636363636363%;"></a>
+    
+        <a href="./Serial input.html" title="Serial input" class="chapter done new-chapter" data-progress="6" style="left: 72.72727272727273%;"></a>
+    
+        <a href="./Analogue Input.html" title="Analogue Input" class="chapter done new-chapter" data-progress="7" style="left: 81.81818181818181%;"></a>
+    
+        <a href="./Filesystem.html" title="Filesystem" class="chapter done new-chapter" data-progress="8" style="left: 90.9090909090909%;"></a>
+    
+        <a href="./Servos.html" title="Servos" class="chapter done new-chapter" data-progress="9" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_10">
+                    
+                        <h1 id="servos">Servos</h1>
+<p>If we need to make something be in a particular position based on some code, such as the rudder of a boat, the steering angle of a car, the openness of a window, or the direction of a solar panel, then we can use a servo.</p>
+<p>Servos provide a way to request a position from 0 - 180 degrees. The request is done using only one IO pin, so you can control up to six servos with the Magnolia without adding any other chips.</p>
+<h2 id="the-code">The code</h2>
+<p>No biggie for this one, just open up the example sketch found in <code>File</code> &gt; <code>Examples</code> &gt; <code>Servo</code> &gt; <code>Sweep</code></p>
+<p>Change the pin the servo is attached to by changing this:</p>
+<pre><code>myservo.attach(9);
+</code></pre><p>to this</p>
+<pre><code>myservo.attach(A0);
+</code></pre><p>Now you can upload and wire it up.</p>
+<h2 id="wiring">Wiring</h2>
+<p>Servos have leads with three wires. One is <strong>GND</strong>, one is <strong>VCC</strong>, and the last is the signal wire, <strong>SIG</strong>.</p>
+<ul>
+<li>connect servo <strong>GND</strong> to <strong>GND</strong></li>
+<li>connect servo <strong>VCC</strong> to <strong>VCC</strong></li>
+<li>connect <strong>SIG</strong> to <strong>A0</strong></li>
+</ul>
+<p>As soon as you connect <strong>VCC</strong>, the servo will probably squeak. When powered, the servo will try to go to wherever it thinks it should for a moment, and that could be anywhere while it is powering up.</p>
+<p>As soon as you connect <strong>SIG</strong> to <strong>A0</strong>, the servo should rush to wherever it is meant to be, then continue to follower the 0 - 180 - 0 degree sweep that the Magnolia is looping through.</p>
+<h2 id="where-to-go-">Where to go?</h2>
+<p>You could try combining the light sensor lesson with the servo, and have the servo react to light levels.</p>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./Filesystem.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./Shift Registers.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="gitbook/app.js"></script>
+        
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-mixpanel/plugin.js"></script>
+    
+
+    
+    <script src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {};
+    gitbook.start(config);
+});
+</script>
+
+    </body>
+</html>
