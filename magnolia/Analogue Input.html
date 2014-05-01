@@ -42,7 +42,7 @@
 
 
         
-    <div class="book" data-github="raspofabs/magnoliabook" data-level="7" data-basepath="." data-revision="1398896936737">
+    <div class="book" data-github="raspofabs/magnoliabook" data-level="7" data-basepath="." data-revision="1398930380105">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -272,16 +272,21 @@ void setup()
 <pre><code>void loop()
 {
     int value = analogRead(photo);
+
+    // turn the light on for a bit
     digitalWrite(led,HIGH);
-    delay( (1024-value) / 4 );
+    delay( 10 );
+
+    // off time depends on value
     digitalWrite(led,LOW);
-    delay( value/4 );
+    delay( value );
 }
-</code></pre><p>Note, the smaller <code>value</code> is, the more time the LED will be on for.</p>
+</code></pre><p>Note, the smaller <code>value</code> is, the shorter the delay, and this the faster the LED will flash.</p>
 <h2 id="wiring">Wiring</h2>
 <p>We need to wire up the LED for output, but also the photoresistor for input. Like with the button, we&#39;re going to ground the input line, but this time for a slightly different reason. Voltage across resistors is based on their resistance, and we will use that to make the input pin receive a differing voltage over different brightness reaching the photoresistor. First we wire up, then explain.</p>
 <p>Put the photoresistor in the board and temporarily give the legs names <strong>PH0</strong> and <strong>PH1</strong>. Add a 2kOhm resistor to the board. Name the resistor legs <strong>R0</strong> and <strong>R1</strong>.</p>
 <ul>
+<li><em>The resistor value is quite important, make sure it&#39;s around the 2000 Ohm range for this wiring up. (your kit has a 2k7Ohm)</em></li>
 <li><strong>VCC</strong> to <strong>PH0</strong></li>
 <li><strong>PH1</strong> to <strong>R0</strong></li>
 <li><strong>PH1</strong> to <strong>A1</strong></li>
