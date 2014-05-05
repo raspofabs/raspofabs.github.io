@@ -40,7 +40,7 @@
 
 
         
-    <div class="book" data-github="raspofabs/magnoliabook" data-level="11" data-basepath="." data-revision="1398930380105">
+    <div class="book" data-github="raspofabs/magnoliabook" data-level="11" data-basepath="." data-revision="1399322020380">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -145,6 +145,18 @@
                 </a>
                 
                 
+                <ul class="articles">
+                    
+                        <li  data-level="4.1" data-path="Pulldowns and Pullups.html">
+                            
+                            <a href="./Pulldowns and Pullups.html">
+                                <i class="fa fa-check"></i> <b>4.1.</b> Pulldowns and Pullups
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
             </li>
         
             <li  data-level="5" data-path="Serial output.html">
@@ -171,6 +183,18 @@
                     <i class="fa fa-check"></i> <b>7.</b> Analogue Input
                 </a>
                 
+                
+                <ul class="articles">
+                    
+                        <li  data-level="7.1" data-path="Voltage dividers.html">
+                            
+                            <a href="./Voltage dividers.html">
+                                <i class="fa fa-check"></i> <b>7.1.</b> Voltage dividers
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
                 
             </li>
         
@@ -210,6 +234,13 @@
                 
             </li>
         
+            <li  data-level="12" >
+                
+                <span><b>12.</b> Touch sensing</span>
+                
+                
+            </li>
+        
     </ul>
 </div>
 
@@ -218,31 +249,35 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 27.272727272727273%;min-width: 18.181818181818183%;"></div>
+        <div class="inner" style="width: 23.076923076923077%;min-width: 15.384615384615385%;"></div>
     </div>
     <div class="chapters">
     
         <a href="./index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
     
-        <a href="./Software requirements.html" title="Basic requirements" class="chapter done new-chapter" data-progress="1" style="left: 9.090909090909092%;"></a>
+        <a href="./Software requirements.html" title="Basic requirements" class="chapter done new-chapter" data-progress="1" style="left: 7.6923076923076925%;"></a>
     
-        <a href="./Shift Registers.html" title="Shift Registers" class="chapter done " data-progress="10" style="left: 18.181818181818183%;"></a>
+        <a href="./Shift Registers.html" title="Shift Registers" class="chapter done " data-progress="10" style="left: 15.384615384615385%;"></a>
     
-        <a href="./Multiple Inputs.html" title="Multiple Inputs" class="chapter done " data-progress="11" style="left: 27.272727272727273%;"></a>
+        <a href="./Multiple Inputs.html" title="Multiple Inputs" class="chapter done " data-progress="11" style="left: 23.076923076923077%;"></a>
     
-        <a href="./First steps.html" title="First steps" class="chapter  new-chapter" data-progress="2" style="left: 36.36363636363637%;"></a>
+        <a href="./First steps.html" title="First steps" class="chapter  new-chapter" data-progress="2" style="left: 30.76923076923077%;"></a>
     
-        <a href="./Multiple lights.html" title="Multiple lights" class="chapter  new-chapter" data-progress="3" style="left: 45.45454545454545%;"></a>
+        <a href="./Multiple lights.html" title="Multiple lights" class="chapter  new-chapter" data-progress="3" style="left: 38.46153846153846%;"></a>
     
-        <a href="./Buttons.html" title="Buttons" class="chapter  new-chapter" data-progress="4" style="left: 54.54545454545455%;"></a>
+        <a href="./Buttons.html" title="Buttons" class="chapter  new-chapter" data-progress="4" style="left: 46.15384615384615%;"></a>
     
-        <a href="./Serial output.html" title="Serial output" class="chapter  new-chapter" data-progress="5" style="left: 63.63636363636363%;"></a>
+        <a href="./Pulldowns and Pullups.html" title="Pulldowns and Pullups" class="chapter  " data-progress="4.1" style="left: 53.84615384615385%;"></a>
     
-        <a href="./Serial input.html" title="Serial input" class="chapter  new-chapter" data-progress="6" style="left: 72.72727272727273%;"></a>
+        <a href="./Serial output.html" title="Serial output" class="chapter  new-chapter" data-progress="5" style="left: 61.53846153846154%;"></a>
     
-        <a href="./Analogue Input.html" title="Analogue Input" class="chapter  new-chapter" data-progress="7" style="left: 81.81818181818181%;"></a>
+        <a href="./Serial input.html" title="Serial input" class="chapter  new-chapter" data-progress="6" style="left: 69.23076923076923%;"></a>
     
-        <a href="./Filesystem.html" title="Filesystem" class="chapter  new-chapter" data-progress="8" style="left: 90.9090909090909%;"></a>
+        <a href="./Analogue Input.html" title="Analogue Input" class="chapter  new-chapter" data-progress="7" style="left: 76.92307692307692%;"></a>
+    
+        <a href="./Voltage dividers.html" title="Voltage dividers" class="chapter  " data-progress="7.1" style="left: 84.61538461538461%;"></a>
+    
+        <a href="./Filesystem.html" title="Filesystem" class="chapter  new-chapter" data-progress="8" style="left: 92.3076923076923%;"></a>
     
         <a href="./Servos.html" title="Servos" class="chapter  new-chapter" data-progress="9" style="left: 100%;"></a>
     
@@ -254,12 +289,79 @@
                     <section class="normal" id="section-gitbook_5">
                     
                         <h1 id="multiple-inputs">Multiple Inputs</h1>
-<p>Shift registers come as input types as well as output types. To get more inputs than six into your Magnolia, whilst reducing the number of pins used to do it, we use a shift-in register, or a parallel to serial convertor.</p>
-<p>The basic function of the shift-in register is the same as the shift register, the master (Magnolia) triggers the serial clock to shift the registers inside the chip. In both these chips, one pin can push data into the chip. In the shift-in register, there are three output pins, but we&#39;re not going to use all three, think of them as being convenient optional additions.</p>
-<p>In the shift-register, we had a latch pin that when triggered, took the internal registers Q&#39; and put them out to the external registers Q. In the shift-in register, we have internal registers Q, and when we trigger the latch pin, the external registers P overwrite them.</p>
-<p>In this way, we can request the input pins are put into the internal buffer (Q), and then read each pin at our leisure (triggering the <strong>SERCLK</strong> to request the next value.)</p>
+<p>Shift registers come as input types as well as output types. To get more inputs than six into your Magnolia, whilst reducing the number of pins used to do it, we use a shift-in register, or a parallel to serial convertor. We are going to use a CD4021B, a shift in register</p>
+<pre><code>P8  1   U   16 Vcc
+Q6  2       15 P7
+Q8  3       14 P6
+P4  4       13 P5
+P3  5       12 Q7
+P2  6       11 SER
+P1  7       10 CLK
+GND 8        9 LATCH
+</code></pre><p>The basic function of the shift-in register is the same as the shift register, the master (Magnolia) triggers the serial clock to shift the registers inside the chip. In both these chips, one pin can push data into the chip. In the shift-in register, there are three output pins, but we&#39;re not going to use all three, think of them as being convenient optional additions.</p>
+<p>In the shift-register, we had a latch pin that when triggered, took the internal registers Q&#39; and put them out to the external registers Q. In the shift-in register, we have internal registers Q, and when we trigger the latch pin &#39;LATCH&#39;, the external registers P overwrite them.</p>
+<p>In this way, we can request the input pins are put into the internal buffer (Q), and then read each pin at our leisure (triggering the <strong>CLK</strong> to request the next value.)</p>
 <h2 id="the-code">The code</h2>
-<h2 id="wiring">Wiring</h2>
+<p>First, we set up which pins we&#39;re going to use.</p>
+<pre><code>int Q8 = A0;
+int CLK = A1;
+int LATCH = A2;
+
+void setup() {
+    Serial.begin(9600);
+    // SER is input, not output.
+    pinMode(Q8, INPUT);
+    // both clocks are still output.
+    pinMode(CLK, OUTPUT);
+    pinMode(LATCH, OUTPUT);
+    Serial.println(&quot;Starting&quot;);
+}
+</code></pre><p>Like the shift-registers, the shift-in registers have a need for a low to high trigger. We can reuse the trigger function from the shift-registers code example.</p>
+<pre><code>void trigger( int pin )
+{
+    digitalWrite(pin,HIGH);
+    digitalWrite(pin,LOW);
+}
+</code></pre><p>Like the serial output, we have a two stage process, but with input we <em>get</em> the values then <em>read</em> them.</p>
+<pre><code>int get_pins() {
+    trigger(LATCH);
+    int value = 0;
+    for( int i = 0; i &lt; 8; ++i ) {
+        value = value &lt;&lt; 1;
+        value += get_one();
+    }
+    return value;
+}
+</code></pre><p><code>get_one</code> is meant to read a single value from the serial registers (the Q values in this chip)</p>
+<pre><code>void get_one( int val ) {
+    int value = digitalRead(Q8);
+    trigger(CLK);
+    return value;
+}
+</code></pre><p>Finally, we will use the value by printing it to the Serial Monitor.</p>
+<pre><code>void loop() {
+    int value = get_pins();
+    Serial.println(value);
+    delay(100);
+}
+</code></pre><h2 id="wiring">Wiring</h2>
+<p>The wiring is a little less complicated for this chip. Every input needs t be pulled-down, but apart from that, there are less wires to worry about.</p>
+<ul>
+<li>Connect Magnolia <strong>GND</strong> to:</li>
+<li><ul>
+<li><strong>GND</strong> on the CD4021</li>
+</ul>
+</li>
+<li><ul>
+<li>via a pulldown resistor, <strong>P1</strong> through <strong>P8</strong></li>
+</ul>
+</li>
+<li>Connect <strong>A0</strong> to <strong>q</strong></li>
+<li>Connect <strong>A1</strong> to <strong>CLK</strong></li>
+<li>Connect <strong>A2</strong> to <strong>LATCH</strong></li>
+<li>Wire up the buttons between <strong>VCC</strong> and <strong>P1</strong> through <strong>P8</strong></li>
+</ul>
+<p><img src="cd4021_bb.png" alt="CD4021"></p>
 <h2 id="more-inputs">More inputs</h2>
 <p>Just as with shift registers, we can chain shift-in registers. As mentioned at the start of this lesson, both chips have serial input, and that means that you can tie <strong>Q8</strong> to <strong>SER</strong> on the next chip down. Make the <strong>SERCLK</strong> common, and the same with <strong>PAR</strong>, and you have all you need to run 16 inputs with the same number of IO pins from the Magnolia.</p>
 
