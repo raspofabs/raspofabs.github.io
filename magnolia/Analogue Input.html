@@ -13,7 +13,7 @@
         <meta name="generator" content="www.gitbook.io">
 
         
-        <link rel="next" href="./Voltage dividers.html" />
+        <link rel="next" href="./Photoresistors.html" />
         
         
         <link rel="prev" href="./Serial input.html" />
@@ -42,7 +42,7 @@
 
 
         
-    <div class="book" data-github="raspofabs/magnoliabook" data-level="7" data-basepath="." data-revision="1399322083067">
+    <div class="book" data-github="raspofabs/magnoliabook" data-level="7" data-basepath="." data-revision="1399408660610">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -188,10 +188,18 @@
                 
                 <ul class="articles">
                     
-                        <li  data-level="7.1" data-path="Voltage dividers.html">
+                        <li  data-level="7.1" data-path="Photoresistors.html">
+                            
+                            <a href="./Photoresistors.html">
+                                <i class="fa fa-check"></i> <b>7.1.</b> Photoresistors
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="7.2" data-path="Voltage dividers.html">
                             
                             <a href="./Voltage dividers.html">
-                                <i class="fa fa-check"></i> <b>7.1.</b> Voltage dividers
+                                <i class="fa fa-check"></i> <b>7.2.</b> Voltage dividers
                             </a>
                             
                         </li>
@@ -251,35 +259,37 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 76.92307692307692%;min-width: 69.23076923076923%;"></div>
+        <div class="inner" style="width: 71.42857142857143%;min-width: 64.28571428571429%;"></div>
     </div>
     <div class="chapters">
     
         <a href="./index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
     
-        <a href="./Software requirements.html" title="Basic requirements" class="chapter done new-chapter" data-progress="1" style="left: 7.6923076923076925%;"></a>
+        <a href="./Software requirements.html" title="Basic requirements" class="chapter done new-chapter" data-progress="1" style="left: 7.142857142857143%;"></a>
     
-        <a href="./Shift Registers.html" title="Shift Registers" class="chapter done " data-progress="10" style="left: 15.384615384615385%;"></a>
+        <a href="./Shift Registers.html" title="Shift Registers" class="chapter done " data-progress="10" style="left: 14.285714285714286%;"></a>
     
-        <a href="./Multiple Inputs.html" title="Multiple Inputs" class="chapter done " data-progress="11" style="left: 23.076923076923077%;"></a>
+        <a href="./Multiple Inputs.html" title="Multiple Inputs" class="chapter done " data-progress="11" style="left: 21.428571428571427%;"></a>
     
-        <a href="./First steps.html" title="First steps" class="chapter done new-chapter" data-progress="2" style="left: 30.76923076923077%;"></a>
+        <a href="./First steps.html" title="First steps" class="chapter done new-chapter" data-progress="2" style="left: 28.571428571428573%;"></a>
     
-        <a href="./Multiple lights.html" title="Multiple lights" class="chapter done new-chapter" data-progress="3" style="left: 38.46153846153846%;"></a>
+        <a href="./Multiple lights.html" title="Multiple lights" class="chapter done new-chapter" data-progress="3" style="left: 35.714285714285715%;"></a>
     
-        <a href="./Buttons.html" title="Buttons" class="chapter done new-chapter" data-progress="4" style="left: 46.15384615384615%;"></a>
+        <a href="./Buttons.html" title="Buttons" class="chapter done new-chapter" data-progress="4" style="left: 42.857142857142854%;"></a>
     
-        <a href="./Pulldowns and Pullups.html" title="Pulldowns and Pullups" class="chapter done " data-progress="4.1" style="left: 53.84615384615385%;"></a>
+        <a href="./Pulldowns and Pullups.html" title="Pulldowns and Pullups" class="chapter done " data-progress="4.1" style="left: 50%;"></a>
     
-        <a href="./Serial output.html" title="Serial output" class="chapter done new-chapter" data-progress="5" style="left: 61.53846153846154%;"></a>
+        <a href="./Serial output.html" title="Serial output" class="chapter done new-chapter" data-progress="5" style="left: 57.142857142857146%;"></a>
     
-        <a href="./Serial input.html" title="Serial input" class="chapter done new-chapter" data-progress="6" style="left: 69.23076923076923%;"></a>
+        <a href="./Serial input.html" title="Serial input" class="chapter done new-chapter" data-progress="6" style="left: 64.28571428571429%;"></a>
     
-        <a href="./Analogue Input.html" title="Analogue Input" class="chapter done new-chapter" data-progress="7" style="left: 76.92307692307692%;"></a>
+        <a href="./Analogue Input.html" title="Analogue Input" class="chapter done new-chapter" data-progress="7" style="left: 71.42857142857143%;"></a>
     
-        <a href="./Voltage dividers.html" title="Voltage dividers" class="chapter  " data-progress="7.1" style="left: 84.61538461538461%;"></a>
+        <a href="./Photoresistors.html" title="Photoresistors" class="chapter  " data-progress="7.1" style="left: 78.57142857142857%;"></a>
     
-        <a href="./Filesystem.html" title="Filesystem" class="chapter  new-chapter" data-progress="8" style="left: 92.3076923076923%;"></a>
+        <a href="./Voltage dividers.html" title="Voltage dividers" class="chapter  " data-progress="7.2" style="left: 85.71428571428571%;"></a>
+    
+        <a href="./Filesystem.html" title="Filesystem" class="chapter  new-chapter" data-progress="8" style="left: 92.85714285714286%;"></a>
     
         <a href="./Servos.html" title="Servos" class="chapter  new-chapter" data-progress="9" style="left: 100%;"></a>
     
@@ -295,18 +305,19 @@
 <h2 id="analog-reading">Analog reading</h2>
 <p>Before we get to the code, an important thing to remember. Unlike digitalRead and digitalWrite, the analogueRead doesn&#39;t use <code>LOW</code> and <code>HIGH</code>, but a range from values from <code>0</code> to <code>1023</code>, so make sure to keep that in mind.</p>
 <h2 id="the-code">The code</h2>
-<p>We&#39;re going to be doing a nice and reactive example that uses the photoresistor. Set up a pin for the resistor like this.</p>
+<p>We&#39;re going to be doing a nice and reactive example that uses a potentiometer. Set up a pin for the pot middle pin like this.</p>
 <pre><code>int led = A0;
-int photo = A2;
+int pot = A1;
 
 void setup()
 {
     pinMode(led, OUTPUT);
 }
-</code></pre><p>Then we need to read the value before we use it in the loop function.</p>
+</code></pre><p>Notice we don&#39;t set up the input pin. By default, all ATMega328P pins are in input state. You can do it explicitly if you wish (add <code>pinMode(pot, INPUT);</code> to <code>setup()</code>).</p>
+<p>Then we need to read the value before we use it in the loop function. Note that value is a <em>local</em> variable, that is, it is created every time the loop function is called. With local variables, we have to explicitely initialise them. In this case, we declare the variable <code>value</code> as an <code>int</code> then give it a value from <code>analogRead</code> straight away.</p>
 <pre><code>void loop()
 {
-    int value = analogRead(photo);
+    int value = analogRead(pot);
 
     // turn the light on for a bit
     digitalWrite(led,HIGH);
@@ -318,23 +329,20 @@ void setup()
 }
 </code></pre><p>Note, the smaller <code>value</code> is, the shorter the delay, and this the faster the LED will flash.</p>
 <h2 id="wiring">Wiring</h2>
-<p>We need to wire up the LED for output, but also the photoresistor for input. Like with the button, we&#39;re going to ground the input line, but this time for a slightly different reason. Voltage across resistors is based on their resistance, and we will use that to make the input pin receive a differing voltage over different brightness reaching the photoresistor. First we wire up, then explain.</p>
-<p>Put the photoresistor in the board and temporarily give the legs names <strong>PH0</strong> and <strong>PH1</strong>. Add a 2kOhm resistor to the board. Name the resistor legs <strong>R0</strong> and <strong>R1</strong>.</p>
+<p>We need to wire up the LED for output, and the potentiometer for input. Like with the button, we&#39;re going to ground the input line, but this time in different way.</p>
+<p>Put the potentiometer in the board and temporarily give the legs names <strong>PLEFT</strong>, <strong>PMID</strong> and <strong>PRIGHT</strong>.</p>
 <ul>
-<li><em>The resistor value is quite important, make sure it&#39;s around the 2000 Ohm range for this wiring up. (your kit has a 2k7Ohm)</em></li>
-<li><strong>VCC</strong> to <strong>PH0</strong></li>
-<li><strong>PH1</strong> to <strong>R0</strong></li>
-<li><strong>PH1</strong> to <strong>A1</strong></li>
-<li><strong>R1</strong> to <strong>GND</strong></li>
+<li><strong>PLEFT</strong> to <strong>VCC</strong></li>
+<li><strong>PRIGHT</strong> to <strong>GND</strong></li>
+<li><strong>PMID</strong> to <strong>A1</strong></li>
 <li><strong>GND</strong> to LED cathode (neg)</li>
 <li><strong>A0</strong> to LED anode (pos)</li>
 </ul>
 <h2 id="running">Running</h2>
-<p>Now try the example. The LED light should be flashing. If you cover the photoresistor, the amount of time the LED is on for per cycle will increase.</p>
-<h2 id="why-ground-">Why ground?</h2>
-<p>If we ground with different values of resistor, the photoresistor will become sensitive to different levels of light. High value resistances make it less sensitve, allowing for sunlight levels. Low value resistances make it more sensitive, meaning you can detect low light level differences. This is because the grounding resistance pairs with the photoresistor resistance to create a voltage divider.</p>
+<p>Now try the example. The LED light should be flashing. If you turn the knob, the amount of time the LED is on for per cycle will change. Move the knob towards the left pin, and the <code>analogRead</code> will return a smaller value, around 0, so the light will be on most of the time. Turn the knob towards the right pin, and <code>analogRead</code> will return a large value, around the maximum of 1023, and the delay will cause the led to blink about once a second.</p>
+<h2 id="why-three-wires-">Why three wires?</h2>
 <p>This is how we make inputs work with potentiometers (sliders and knobs, and other variable resistors). We ground one side, power the other, then catch a voltage off the middle pin.</p>
-<p>If you have a unpredictable analogue input (such as a photoresistor) you can add a variable resistor to the mix so you can tweak the lower and upper range, effectively giving you a hardware trimming. To do this, attach <strong>VCC</strong> to the live end of the variable resistor, and then attach the <strong>R1</strong> to the middle pin of the variable resistor. This way you can adjust the resistance opposing the photoresistor to fine tune the sensitivity.</p>
+<p>What&#39;s really happening is that the potentiometer is acting as a dynamic pair of resistors, and they are doing a voltage division. This means that they are splitting the voltage between them by how much resistance each side of the middle pin has. The middle pin acts as a pointer to a continuum of different voltages between the left and right legs. When the middle is all the way over one side, that side has very little resistance, so ends up taking up a very small amount of the voltage. Meaning the middle has a value very similar to the side it is nearest to.</p>
 <h2 id="take-away">Take away</h2>
 <p>Always ground things that are going to be used as inputs.</p>
 
@@ -349,7 +357,7 @@ void setup()
         <a href="./Serial input.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="./Voltage dividers.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        <a href="./Photoresistors.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
