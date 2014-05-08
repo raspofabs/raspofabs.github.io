@@ -42,7 +42,7 @@
 
 
         
-    <div class="book" data-github="raspofabs/magnoliabook" data-level="10" data-basepath="." data-revision="1399408660610">
+    <div class="book" data-github="raspofabs/magnoliabook" data-level="10" data-basepath="." data-revision="1399535324454">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -340,10 +340,10 @@ GND 8        9 Qh&#39;
     for( int i = 0; i &lt; 8; ++i )
     {
         // send only the lowest bit
-        put_one( val &amp; 1 );
+        put_one( bits &amp; 1 );
 
         // move the next highest bit down
-        val &gt;&gt;= 1;
+        bits &gt;&gt;= 1;
     }
     trigger(RCLK); // move Q&#39; into Q
 }
@@ -373,9 +373,9 @@ void loop()
 <p>Any time the wiring requires a line from <strong>VCC</strong> or <strong>GND</strong> now, take it from these powered rails.</p>
 <p>Place your shift register with the little dimple near the top, but a few rows down. Just so you have a little bit of space to work with. The top right pin (next to dimple) needs connecting to <strong>VCC</strong>, and the bottom left needs connecting to <strong>GND</strong>.</p>
 <p>To hard wire the chip as enabled, wire <strong>GND</strong> to pin 13 (three down from <strong>VCC</strong>). To stop the chip from self clearing, power <strong>SRCLR</strong> with <strong>VCC</strong>. <strong>SRCLR</strong> is pin 10, one up from bottom right.</p>
-<p>Take three long leads and connect <strong>SER</strong> (pin 14) to <strong>A0</strong>, <strong>SRCLK</strong> (pin 12) to <strong>A1</strong>, and <strong>RCLK</strong> (pin 11) to <strong>A2</strong>.</p>
+<p>Take three long leads and connect <strong>SER</strong> (pin 14) to <strong>A0</strong>, <strong>SRCLK</strong> (pin 11) to <strong>A1</strong>, and <strong>RCLK</strong> (pin 12) to <strong>A2</strong>.</p>
 <p>Take a jumper and jump between Qa (pin 15), and the row above Qb. This is so you can have all your LEDs plugged straight into the 8 rows starting above Qb.</p>
-<p>Insert all your LEDs anode by the chip. All the cathodes should link to one of the two remaining rails. This rail will have a 2k resistor just to make sure the overall current drop doesn&#39;t drain the Magnolia. The 2k resistor should then be linked to <strong>GND</strong>.</p>
+<p>Insert all your LEDs anode by the chip. All the cathodes should link to one of the two remaining rails. This rail will have a 2k7 resistor just to make sure the overall current drop doesn&#39;t drain the Magnolia. The 2k7 resistor should then be linked to <strong>GND</strong>.</p>
 <p>Upload!</p>
 <p><img src="ShiftReg_bb.png" alt="button"></p>
 <h2 id="more-outputs">More outputs</h2>
