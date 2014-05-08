@@ -42,7 +42,7 @@
 
 
         
-    <div class="book" data-github="raspofabs/magnoliabook" data-level="10" data-basepath="." data-revision="1399535324454">
+    <div class="book" data-github="raspofabs/magnoliabook" data-level="10" data-basepath="." data-revision="1399535592352">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -313,7 +313,11 @@ Qh  7       10 SRCLR(power to disable)
 GND 8        9 Qh&#39;
 </code></pre><h2 id="the-code">The code</h2>
 <p>The <strong>HC595</strong> has a 16 pins, 8 are outputs, the rest are <strong>VCC</strong>, <strong>GND</strong>, or other IO pins to control the chip. We will be using all eight output pins that are meant to be the parallel output to power our LEDs. To drive those outputs we will be connecting to the data and clock line for the internal registers, and pushing the internal registers to the output pins with the register clock. We&#39;re going to be hard wiring the enable and clear pins and not using the chaining pin to start with.</p>
-<p>When using chips with clock lines, we usually find they are triggered by positive-edge. This means the line transitions from a <code>LOW</code> to a <code>HIGH</code>. We&#39;ll start by adding this function to the top of our sketch so the main code can call it.</p>
+<p>To start with, let&#39;s declare our pins:</p>
+<pre><code>int SER = A0;
+int SRCLK = A1;
+int RCLK = A2;
+</code></pre><p>When using chips with clock lines, we usually find they are triggered by positive-edge. This means the line transitions from a <code>LOW</code> to a <code>HIGH</code>. We&#39;ll start by adding this function to the top of our sketch so the main code can call it.</p>
 <pre><code>void trigger( int pin )
 {
     // assume pin in low state
@@ -348,11 +352,7 @@ GND 8        9 Qh&#39;
     trigger(RCLK); // move Q&#39; into Q
 }
 </code></pre><p>This function can now be used by our main loop and setup code.</p>
-<pre><code>int SER = A0;
-int SRCLK = A1;
-int RCLK = A2;
-
-void setup()
+<pre><code>void setup()
 {
     pinMode(SER, OUTPUT);
     pinMode(SRCLK, OUTPUT);
